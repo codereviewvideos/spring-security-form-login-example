@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Private</title>
+</head>
+<body>
+<h1>Private</h1>
+<p>This page is only available once successfully logged in.</p>
+<p>Click to <a href="/public">visit a public page</a>.</p>
+<p>Click to <a href="/login">visit the login page</a>.</p>
+<p>Click to <a th:href="@{/logout}">visit the logout page</a>.</p>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Logout"/>
+</form>
+</body>
+</html>

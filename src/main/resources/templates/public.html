@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome!</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p>This page is publicly available.</p>
+    <p>Click to <a href="/private">visit a private page</a>.</p>
+    <p>Click to <a href="/login">visit the login page</a>.</p>
+    <p>This is a GET request and won't work. Click to <a th:href="@{/logout}">visit the logout page</a>.</p>
+    <p>Examine the HTML for the button below, and see that Spring Security has injected a CSRF token. This is also a POST request.</p>
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Logout"/>
+    </form>
+</body>
+</html>
